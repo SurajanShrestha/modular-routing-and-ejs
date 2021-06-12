@@ -5,33 +5,32 @@
 <li class="nav-item">
     <a class="nav-link active" href="/about">About</a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="/contact">Contact</a>
+</li>
 
-<%- contentFor('hero') %>
-<section class="container">
-    <img src="/public/img/i1.jpg" width="100%" height="auto">
-</section>
+<%- contentFor('gif') %>
+<img src="/public/img/about.gif" class="gif">
 
 <%- contentFor('body') %>
-<div class="jumbotron text-center bg-light px-3 py-3">
-    <h5>About Team</h5>
-    <div class="row py-3 mb-3">
-        <!--Using for...of statement-->
-        <!--<% for(member of team){ %>
-            <div class="col-4">
-                <h5><%= member.name %></h5>
-                <p><%= member.email %></p>
-                <img src="<%= member.avatar %>" width="100%">
-            </div>
-        <% } %>-->
+<h2 class="pb-2">About Team</h2>
+<div class="col-lg-10 offset-lg-1 d-flex justify-content-between bg-light text-center py-5 px-3 mb-3">
+    <!--Using for...of statement-->
+    <!--<% for(member of team){ %>
+        <div class="col-4">
+            <h5><%= member.name %></h5>
+            <p><%= member.email %></p>
+            <img src="<%= member.avatar %>" width="100%">
+        </div>
+    <% } %>-->
 
-        <!--Using forEach method-->
-        <!--Only the Javascript part should be kept inside <% %> or <%= %>-->
-        <% team.forEach(member=>{ %>
-            <div class="col-4">
-                <h6><%= member.name %></h6>
-                <p><%= member.email %></p>
-                <img src="<%= member.avatar %>" width="100%">
-            </div>
-        <% }) %>
-    </div>
+    <!--Using forEach method-->
+    <!--Only the Javascript part should be kept inside <% %> or <%= %>-->
+    <% team.forEach(member=>{ %>
+        <div class="col-4">
+            <h6><%= member.name %></h6>
+            <p><%= member.email %></p>
+            <img src="<%= member.avatar %>" width="100%">
+        </div>
+    <% }) %>
 </div>

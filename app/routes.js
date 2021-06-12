@@ -37,4 +37,12 @@ router.get("/about",(req,res)=>{
     res.render(path.join('pages','/about'), {team: teamArray});
 });
 
+router.get("/contact",(req,res)=>{
+    res.render(path.join('pages','/contact'));
+});
+
+router.post("/contact",(req,res)=>{
+    res.send("Thank you for contacting us, "+req.body.name+". We'll soon contact you asap. Be sure to check your mail: "+req.body.email+".");
+});
+
 module.exports=router;

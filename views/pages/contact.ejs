@@ -1,0 +1,30 @@
+<%- contentFor('nav-item-active') %>
+<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="/">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/about">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+</li>
+
+<%- contentFor('body') %>
+<div class="col-lg-6 offset-lg-3 bg-light text-center py-5 px-3 mb-3">
+    <h2 class="pb-2">Contact Us</h2>
+    <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur similique eum ullam blanditiis quidem harum veritatis vitae placeat architecto doloremque, ipsa, ea officia temporibus voluptatum eos unde alias, nesciunt natus!</small>
+    <form action="/contact" method="POST" class="pt-3">
+        <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" area-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone :)</div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+</div>

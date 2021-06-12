@@ -1,5 +1,6 @@
 const express=require('express');
 const path=require('path');
+const bodyParser=require('body-parser');
 //Using express-ejs-layouts which allows us to use a base layout so that we don't have to repeat our html code a bunch of times.
 //We also use ejs as the templating language so that we can pass data to our views easily.
 const expressLayouts=require('express-ejs-layouts');
@@ -18,6 +19,9 @@ OR, to use layout stored in a separate file, we use
 app.set('layout', 'layouts/myLayout'); this uses myLayout.ejs stored in layouts folder in views directory i.e /views/layouts/myLayout
 */
 app.use(expressLayouts);
+
+//Use Body Parser
+app.use(bodyParser.urlencoded({extended: false}));
 
 //Routes
 const router=require('./app/routes');
