@@ -1,0 +1,37 @@
+<%- contentFor('nav-item-active') %>
+<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="/">Home</a>
+  </li>
+<li class="nav-item">
+    <a class="nav-link active" href="/about">About</a>
+</li>
+
+<%- contentFor('hero') %>
+<section class="container">
+    <img src="/public/img/i1.jpg" width="100%" height="auto">
+</section>
+
+<%- contentFor('body') %>
+<div class="jumbotron text-center bg-light px-3 py-3">
+    <h5>About Team</h5>
+    <div class="row py-3 mb-3">
+        <!--Using for...of statement-->
+        <!--<% for(member of team){ %>
+            <div class="col-4">
+                <h5><%= member.name %></h5>
+                <p><%= member.email %></p>
+                <img src="<%= member.avatar %>" width="100%">
+            </div>
+        <% } %>-->
+
+        <!--Using forEach method-->
+        <!--Only the Javascript part should be kept inside <% %> or <%= %>-->
+        <% team.forEach(member=>{ %>
+            <div class="col-4">
+                <h6><%= member.name %></h6>
+                <p><%= member.email %></p>
+                <img src="<%= member.avatar %>" width="100%">
+            </div>
+        <% }) %>
+    </div>
+</div>
